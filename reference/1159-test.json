@@ -1,0 +1,233 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "e3qs9dyxmuxwf"
+  },
+  "info": {
+    "title": "1159-test",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get All Users",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../models/UserTest.json"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-Vcsi-Infa-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Vcsi-Tyk-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-users",
+        "x-stoplight": {
+          "id": "k8qqpav300iod"
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "req-id"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "userIds"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "salesId"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "limit"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "offset"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "startDate"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "endDate"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "plantId"
+          }
+        ]
+      }
+    },
+    "/users/{userId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "userId",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "USerId",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Vcsi-Tyk-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Vcsi-Infa-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "../models/UserTest.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-users-userId",
+        "x-stoplight": {
+          "id": "a34z7l1wfmdwx"
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "req-id"
+          }
+        ]
+      }
+    },
+    "/users-event": {
+      "get": {
+        "summary": "User event",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Vcsi-Infa-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Vcsi-Tyk-Request-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-users-event",
+        "x-stoplight": {
+          "id": "ttgctprvcytcu"
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "req-id"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "startDate"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "endDate"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "offset"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "limit"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
