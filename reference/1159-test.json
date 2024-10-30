@@ -15,7 +15,7 @@
   "paths": {
     "/users": {
       "get": {
-        "summary": "Get All Users1",
+        "summary": "Get All Users",
         "tags": [],
         "responses": {
           "200": {
