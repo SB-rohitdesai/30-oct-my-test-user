@@ -1,0 +1,27 @@
+{
+  "title": "UserEvent",
+  "x-stoplight": {
+    "id": "e4gkwk0pr68ik"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "ajs3lddtb7obj"
+      }
+    },
+    "eventDate": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "iylv875ig95au"
+      }
+    },
+    "data": {
+      "$ref": "./UserTest.json",
+      "x-stoplight": {
+        "id": "90t7qw5jxrhoq"
+      }
+    }
+  }
+}

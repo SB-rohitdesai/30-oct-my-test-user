@@ -1,0 +1,63 @@
+{
+  "title": "UserTest",
+  "x-stoplight": {
+    "id": "2nusiv3yze5qf"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "ryyuhz59tj9ad"
+      }
+    },
+    "langauge": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "ekify4zuhba0e"
+      }
+    },
+    "name": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "mf77fheqpot6k"
+      }
+    },
+    "address": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "4kqml5zqenoqt"
+      }
+    },
+    "identifications": {
+      "type": [
+        "array"
+      ],
+      "minItems": 1,
+      "description": "The business partner identification helps to maintain a record of business partners' identification numbers according to their identification types, for further assign/retrieve specific information related to the business partner. Example: For France, you may define FR:SIREN and FR:SIRET as Business partner identification number types and set their respective values as business partner identification numbers. Then use the business partner types SIREN and SIRET to store and retrieve the tax number information such as VAT.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "customerIdType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "example": "BUP002",
+            "description": "A document (such as an ID card or driver's license) or an entry in a system of records (such as a commercial register) whose key can be stored as an attribute for a Business Partner."
+          },
+          "customerIdNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "example": "A882934789",
+            "description": "Number that serves to identify a Business Partner, such as driver's license or ID card number."
+          }
+        }
+      }
+    },
+  }
+}
